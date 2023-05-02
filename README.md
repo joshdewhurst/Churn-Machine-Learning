@@ -30,6 +30,19 @@ We then create an instance of the decision tree classifier and fit it to the tra
 
 Finally, we evaluate the performance of the model using metrics like accuracy, precision, and recall.
 
+## How to run this code
+
+1. Ensure that the required libraries are installed. You can use pip to install them if they are not already installed:
+`pip install pandas scikit-learn`
+
+2. Create a CSV file with customer data. The file should have columns for usage_frequency, account_status, other_behavioral_data, and churn.
+
+3. Save the CSV file in the same directory as the Python script and name it customer_data.csv.
+
+4. Run the Python script. It will load the customer data from the CSV file, split it into training and testing sets, fit a decision tree model to the training set, make predictions on the testing set, and evaluate the model's performance.
+
+5. The script will output the accuracy, precision, and recall scores for the model. You can use these scores to evaluate how well the model is performing.
+
 # Random Forest
 
 This loads customer data from a CSV file, trains a Random Forest Classifier model on the data, and evaluates the model's performance by comparing the predicted target variable with the actual target variable. The goal of the model is to predict which customers are most likely to churn.
