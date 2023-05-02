@@ -1,29 +1,28 @@
-# Import required libraries
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import precision_score, recall_score
-
 
 # Load the data
 data = pd.read_csv('customer_data.csv')
 
+# Map the 'Yes' and 'No' values to 1 and 0 for the 'status' column
 data['status'] = data['status'].map({'Yes': 1, 'No': 0})
-
 
 # Select the features and target variable
 X = data[['usage_frequency', 'status', 'other_behavioral_data']]
-y = data['churn']
 
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Fit the logistic regression model
+# Fit the logistic regression model on the entire dataset
 lr = LogisticRegression()
-lr.fit(X_train, y_train)
+lr.fit(X, data['churn'])
 
-# Make predictions on the test set
-y_pred = lr.predict(X_test)
+# Make predictions on the dataset
+y_pred = lr.predict(X)
+
+# Add the predicted churn values to the DataFrame as a new column
+data['churn_prediction'] = y_pred
+
+# Write the updated DataFrame to a new CSV file
+data.to_csv('customer_data_predicted.csv', index=False)
 
 # Evaluate the model's performance
 accuracy = lr.score(X_test, y_test)
