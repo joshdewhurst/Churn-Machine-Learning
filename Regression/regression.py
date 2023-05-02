@@ -6,6 +6,10 @@ from sklearn.model_selection import train_test_split
 # Load the data
 data = pd.read_csv('customer_data.csv')
 
+# One-hot encode the categorical features
+data = pd.get_dummies(data, columns=['account_status'])
+
+
 # Select the features and target variable
 X = data[['usage_frequency', 'account_status', 'other_behavioral_data']]
 y = data['churn']
