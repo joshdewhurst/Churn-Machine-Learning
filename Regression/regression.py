@@ -6,15 +6,8 @@ from sklearn.model_selection import train_test_split
 # Load the data
 data = pd.read_csv('customer_data.csv')
 
-# Rename the column to match the one-hot encoding column name
-data = data.rename(columns={'status': 'account_status'})
-
-# One-hot encode the categorical features
-data = pd.get_dummies(data, columns=['account_status'], drop_first=True)
-
-
 # Select the features and target variable
-X = data[['usage_frequency', 'account_status', 'other_behavioral_data']]
+X = data[['usage_frequency', 'status', 'other_behavioral_data']]
 y = data['churn']
 
 # Split the data into training and testing sets
