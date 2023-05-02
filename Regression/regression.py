@@ -34,3 +34,22 @@ print("Accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
 
+# Load the data
+new_data = pd.read_csv('new_data.csv')
+
+# Preprocess the data (if necessary) - this should include the same preprocessing steps used on the training data
+
+# Select the features
+X_new = new_data[['usage_frequency', 'status', 'other_behavioral_data']]
+
+# Load the trained logistic regression model
+lr = LogisticRegression()
+
+# Fit the logistic regression model to the training data
+lr.fit(X_train, y_train)
+
+# Make predictions on the new data set
+y_pred_new = lr.predict(X_new)
+
+# Print the predictions
+print(y_pred_new)
