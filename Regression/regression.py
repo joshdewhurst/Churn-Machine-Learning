@@ -25,12 +25,6 @@ lr.fit(X_train, y_train)
 # Make predictions on the test set
 y_pred = lr.predict(X_test)
 
-# Predict the values of y for new data points
-new_data = pd.read_csv('new_data.csv')
-new_data['status'] = new_data['status'].map({'Yes': 1, 'No': 0})
-X_new = new_data[['usage_frequency', 'status', 'other_behavioral_data']]
-y_pred = lr.predict(X_new)
-
 # Evaluate the model's performance
 accuracy = lr.score(X_test, y_test)
 precision = precision_score(y_test, y_pred)
