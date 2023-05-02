@@ -28,3 +28,6 @@ accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 
+print("Accuracy:" accuracy)
+print("Precision:" precision)
+print("Recall:" accuracy)
