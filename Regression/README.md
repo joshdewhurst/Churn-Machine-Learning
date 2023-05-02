@@ -1,0 +1,1 @@
+1. usage_frequency: This column represents how often the customer uses the service or product offered by the company. The values are numerical and can range from 1 to 6.5, with higher values indicating a more frequent usage of the service.
