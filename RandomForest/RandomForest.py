@@ -35,8 +35,6 @@ print("Recall:", recall)
 # Load the new data
 new_data = pd.read_csv('new_data.csv')
 
-# Preprocess the data (if necessary) - this should include the same preprocessing steps used on the training data
-
 # Select the features
 X_new = new_data[['usage_frequency', 'account_status', 'other_behavioral_data']]
 
