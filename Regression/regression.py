@@ -2,6 +2,8 @@
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import precision_score, recall_score
+
 
 # Load the data
 data = pd.read_csv('customer_data.csv')
