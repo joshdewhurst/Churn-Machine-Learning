@@ -6,6 +6,9 @@ from sklearn.model_selection import train_test_split
 # Load the data
 data = pd.read_csv('customer_data.csv')
 
+data['status'] = data['status'].map({'Yes': 1, 'No': 0})
+
+
 # Select the features and target variable
 X = data[['usage_frequency', 'status', 'other_behavioral_data']]
 y = data['churn']
