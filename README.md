@@ -21,3 +21,15 @@ We then create an instance of the logistic regression model and fit it to the tr
 Finally, we evaluate the performance of the model using metrics like accuracy, precision, and recall.
 
 Note that this is just an example and the actual code for implementing a machine learning algorithm will depend on the specific problem and dataset.
+
+# Decision Tree
+
+In this code, we first import the necessary libraries (pandas, scikit-learn's decision tree model, and the train_test_split function for splitting the data into training and testing sets).
+
+We then load the data from a CSV file and select the relevant features and target variable. We split the data into training and testing sets using the train_test_split function.
+
+We then create an instance of the decision tree classifier and fit it to the training data using the fit method. We then use the predict method to make predictions on the test set.
+
+Finally, we evaluate the performance of the model using metrics like accuracy, precision, and recall.
+
+Note that this is just an example and the actual code for implementing a decision tree algorithm will depend on the specific problem and dataset. Additionally, you can adjust the parameters of the Decision Tree model, like the maximum depth or the minimum number of samples required to split a node, to improve the model's performance.
