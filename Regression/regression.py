@@ -38,6 +38,7 @@ print("Recall:", recall)
 new_data = pd.read_csv('new_data.csv')
 
 # Preprocess the data (if necessary) - this should include the same preprocessing steps used on the training data
+new_data['status'] = new_data['status'].map({'Yes': 1, 'No': 0})
 
 # Select the features
 X_new = new_data[['usage_frequency', 'status', 'other_behavioral_data']]
