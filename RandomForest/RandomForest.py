@@ -31,3 +31,17 @@ recall = recall_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
+
+# Load the new data
+new_data = pd.read_csv('new_data.csv')
+
+# Preprocess the data (if necessary) - this should include the same preprocessing steps used on the training data
+
+# Select the features
+X_new = new_data[['usage_frequency', 'account_status', 'other_behavioral_data']]
+
+# Make predictions on the new data set
+y_pred_new = rf.predict(X_new)
+
+# Print the predictions
+print(y_pred_new)
