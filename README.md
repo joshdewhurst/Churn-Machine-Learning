@@ -34,13 +34,7 @@ Finally, we evaluate the performance of the model using metrics like accuracy, p
 
 # Random Forest
 
-In this code, we first import the necessary libraries (pandas, scikit-learn's random forest model, and the train_test_split function for splitting the data into training and testing sets).
-
-We then load the data from a CSV file and select the relevant features and target variable. We split the data into training and testing sets using the train_test_split function.
-
-We then create an instance of the random forest classifier and fit it to the training data using the fit method. In this case, we specify that we want to use 100 decision trees and limit their maximum depth to 5. We then use the predict method to make predictions on the test set.
-
-Finally, we evaluate the performance of the model using metrics like accuracy, precision, and recall.
+This loads customer data from a CSV file, trains a Random Forest Classifier model on the data, and evaluates the model's performance by comparing the predicted target variable with the actual target variable. The goal of the model is to predict which customers are most likely to churn.
 
 # Gradient Boosting
 This builds a predictive model using a Gradient Boosting Classifier from the scikit-learn library. The code loads the customer data from a CSV file, selects the relevant features and target variable, splits the data into training and testing sets, fits the gradient boosting model to the training data, makes predictions on the test set, and evaluates the model's performance using accuracy, precision, and recall metrics. The model is trained to identify which customers are most likely to churn based on their usage frequency, account status, and other behavioral data.
