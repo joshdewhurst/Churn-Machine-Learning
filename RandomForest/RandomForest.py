@@ -39,6 +39,7 @@ new_data = pd.read_csv('new_data.csv')
 new_data = pd.get_dummies(new_data, columns=['account_status'])
 
 # Make predictions on the new data set
+X_new = new_data  # rename the variable for consistency
 y_pred_new = rf.predict(X_new)
 
 # Print the predictions
