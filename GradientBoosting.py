@@ -15,11 +15,11 @@ y = data['churn']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Fit the gradient boosting model
-gb = GradientBoostingClassifier(n_estimators=100, max_depth=5, random_state=42)
-gb.fit(X_train, y_train)
+model = GradientBoostingClassifier(n_estimators=100, max_depth=5, random_state=42)
+model.fit(X_train, y_train)
 
 # Make predictions on the test set
-y_pred = gb.predict(X_test)
+y_pred = model.predict(X_test)
 
 # Evaluate the model's performance
 accuracy = accuracy_score(y_test, y_pred)
