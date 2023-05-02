@@ -22,7 +22,7 @@ Here's a step-by-step guide on how to use the code to analyze customer churn:
 * **Run the code**: Once you've made these changes, run the code to fit the logistic regression model, make predictions on the test set, and evaluate the model's performance using metrics like accuracy, precision, and recall.
 
 
-**To run the code, you'll need to follow these steps: **
+**To run the code, you'll need to follow these steps:**
 
 1. Make sure you have Python installed on your computer.
 2. Open a text editor (e.g., Atom, Sublime Text, VS Code) and create a new file.
