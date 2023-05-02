@@ -30,6 +30,9 @@ accuracy = lr.score(X_test, y_test)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 
+# Print the predicted values
+print(y_pred)
+
 print("Accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
