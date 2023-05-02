@@ -6,8 +6,11 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score
 # Load the data
 data = pd.read_csv('customer_data.csv')
 
+# Convert categorical variables to numerical format using one-hot encoding
+data = pd.get_dummies(data, columns=['account_status'])
+
 # Select the features and target variable
-X = data[['usage_frequency', 'account_status', 'other_behavioral_data']]
+X = data.drop(['churn'], axis=1)
 y = data['churn']
 
 # Split the data into training and testing sets
