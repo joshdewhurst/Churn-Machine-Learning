@@ -10,7 +10,8 @@ data = pd.read_csv('customer_data.csv')
 data = data.rename(columns={'status': 'account_status'})
 
 # One-hot encode the categorical features
-data = pd.get_dummies(data, columns=['account_status'])
+data = pd.get_dummies(data, columns=['account_status'], drop_first=True)
+
 
 # Select the features and target variable
 X = data[['usage_frequency', 'account_status_Active', 'account_status_Inactive', 'other_behavioral_data']]
