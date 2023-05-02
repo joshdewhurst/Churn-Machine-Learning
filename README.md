@@ -53,14 +53,4 @@ Finally, we evaluate the performance of the model using metrics like accuracy, p
 
 # Neutrel Network
 
-In this code, we first import the necessary libraries (NumPy, Keras, and scikit-learn's train_test_split function).
-
-We then load the data from a CSV file and select the relevant features and target variable. We split the data into training and testing sets using the train_test_split function.
-
-We then define the architecture of the neural network using the Sequential class from Keras. In this case, we create a neural network with two hidden layers, each containing 8 and 4 neurons respectively, and an output layer with a single neuron that outputs a probability value between 0 and 1. We use the rectified linear unit (ReLU) activation function for the hidden layers and the sigmoid activation function for the output layer.
-
-We compile the model using the binary_crossentropy loss function, the Adam optimizer, and the accuracy metric.
-
-We then fit the model to the training data using the fit method, specifying the number of epochs and the batch size.
-
-Finally, we use the predict_classes method to make predictions on the test set and evaluate the performance of the model using metrics like accuracy, precision, and recall.
+This code builds a predictive model using a multi-layer perceptron (MLP) neural network from the scikit-learn library. The code loads the customer data from a CSV file, selects the relevant features and target variable, splits the data into training and testing sets, defines the neural network architecture, fits the model to the training data, makes predictions on the test set, and evaluates the model's performance using accuracy, precision, and recall metrics.
