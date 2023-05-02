@@ -35,11 +35,8 @@ print("Recall:", recall)
 # Load the new data
 new_data = pd.read_csv('new_data.csv')
 
-# Convert categorical variables to numerical format using one-hot encoding
-new_data = pd.get_dummies(new_data, columns=['account_status'])
-
 # Select the features
-X_new = new_data.drop(['customer_id'], axis=1)
+X_new = new_data[['usage_frequency', 'account_status', 'other_behavioral_data']]
 
 # Make predictions on the new data set
 y_pred_new = rf.predict(X_new)
