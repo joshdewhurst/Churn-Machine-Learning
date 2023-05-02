@@ -21,7 +21,7 @@ The input data should be in a CSV file named customer_data.csv. The file should 
 * **usage_frequency**: The frequency of product usage by the customer.
 * **account_status**: The status of the customer's account. This should be a categorical variable with two possible values: "active" or "inactive".
 * **other_behavioral_data**: Other behavioral data about the customer.
-The target variable that we want to predict is churn, which indicates whether or not the customer has churned.
+* The target variable that we want to predict is churn, which indicates whether or not the customer has churned.
 
 # Output
 The program will output the predictions for the new data set provided in the new_data.csv file. The output will be a list of binary values, where 1 indicates that the customer is predicted to churn, and 0 indicates that the customer is predicted to stay.
