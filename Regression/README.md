@@ -6,6 +6,35 @@ In the context of customer churn analysis, Logistic Regression can be used to id
 
 To use the Logistic Regression algorithm to analyze customer churn, a dataset with relevant features such as usage frequency, account status, and other behavioral data can be collected and prepared. The data can then be split into training and testing sets, with the training set used to train the model, and the testing set used to evaluate its performance. The Logistic Regression model can be fit to the training data, and the resulting model can be used to predict the probability of churn for new customers. The model's performance can be evaluated by measuring its accuracy, precision, and recall on the testing set. By analyzing the model's coefficients, businesses can identify the most important factors that contribute to customer churn and develop targeted strategies to retain customers.
 
+# Test this code
+Here's a step-by-step guide on how to use the code to analyze customer churn:
+
+* Prepare the CSV file: You'll need to have a CSV file containing customer data, with one row per customer and columns for various features like usage frequency, account status, and other behavioral data. The last column of the CSV file should be the "churn" column, which indicates whether or not each customer has churned (i.e., stopped using your product or service). One has already been provided as a guide in this repo.
+
+* Save the CSV file in your working directory: Save the CSV file in the same directory as the Python script containing the code.
+
+* Open the Python script and check the libraries: Make sure that the required libraries (pandas, scikit-learn) are installed and imported at the beginning of the code.
+
+* Update the CSV filename: Update the line of code that loads the CSV file with the name of your file: data = pd.read_csv('customer_data.csv')
+
+* Update the feature and target variable columns: Update the line of code that selects the features and target variable with the names of the columns in your CSV file that correspond to these variables: X = data[['usage_frequency', 'account_status', 'other_behavioral_data']] and y = data['churn']
+
+* Run the code: Once you've made these changes, run the code to fit the logistic regression model, make predictions on the test set, and evaluate the model's performance using metrics like accuracy, precision, and recall.
+
+
+** To run the code, you'll need to follow these steps: **
+
+1. Make sure you have Python installed on your computer.
+2. Open a text editor (e.g., Atom, Sublime Text, VS Code) and create a new file.
+3. Copy the code provided into the file.
+4. Save the file with a .py extension
+5. Save the CSV file with customer data in the same directory as the Python script.
+6. Open a command prompt or terminal window and navigate to the directory where the Python script and CSV file are saved.
+7. Type "python regression.py" and hit Enter to run the script.
+8. The script will execute and print the results to the console.
+
+* Interpret the results: The output of the code will include the accuracy, precision, and recall scores, which will give you an idea of how well the logistic regression model is predicting customer churn based on the selected features. You can use these scores to guide your decisions about which customers to target with retention strategies, and to refine your understanding of which features are most predictive of churn in your customer base.
+
 ## Explanation of the `Regression.py` code
 * Import the necessary libraries: pandas for data manipulation, scikit-learn for machine learning algorithms.
 
