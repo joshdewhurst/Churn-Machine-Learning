@@ -8,7 +8,7 @@ from sklearn.neural_network import MLPClassifier
 df = pd.read_csv("customer_data.csv")
 
 # Encode the categorical variable using one-hot encoding
-df = pd.get_dummies(df, columns=['status'])
+df = pd.get_dummies(df, columns=['account_status'])
 
 # Split the data into features and target variable
 X = df.drop('churn', axis=1).values
