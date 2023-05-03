@@ -11,7 +11,7 @@ data = pd.read_csv('customer_data.csv')
 data = pd.get_dummies(data, columns=['account_status', 'other_behavioral_data'])
 
 # Select the features and target variable
-X = data[['usage_frequency', 'account_status', 'other_behavioral_data']]
+X = data.drop(['churn'], axis=1)
 y = data['churn']
 
 # Split the data into training and testing sets
