@@ -4,12 +4,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 from sklearn.neural_network import MLPClassifier
 
-# Load the data
-data = np.loadtxt("customer_data.csv", delimiter=",")
+# Load the data, skip the header row
+data = np.loadtxt("customer_data.csv", delimiter=",", skiprows=1)
 
 # Select the features and target variable
-X = data[:,0:3]
-y = data[:,3]
+X = data[:, 0:3]
+y = data[:, 3]
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
