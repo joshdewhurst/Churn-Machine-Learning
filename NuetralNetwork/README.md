@@ -1,5 +1,8 @@
 # Churn Prediction using Neural Networks
-This code is an implementation of a neural network algorithm for churn prediction, which is a common problem in the business world. The code uses customer data to predict whether a customer will churn or not.
+
+A neural network is a type of machine learning algorithm that is inspired by the structure and function of the human brain. It consists of interconnected nodes or neurons that are organized into layers, with each layer processing and transforming the data before passing it on to the next layer. Neural networks can learn to recognize patterns and relationships in data, and they can be trained to make predictions based on this learning.
+
+One application of neural networks is to predict customer churn, which is the rate at which customers stop doing business with a company. Customer churn can be costly for businesses, so it is important to identify customers who are likely to churn and take steps to prevent them from leaving. Neural networks can be used to analyze customer data and identify patterns and behaviors that are associated with churn. By training a neural network on historical data, it can learn to recognize these patterns and predict which customers are likely to churn in the future. This information can then be used by businesses to take proactive measures to retain those customers.
 
 ## Dependencies
 The code requires the following dependencies to be installed:
