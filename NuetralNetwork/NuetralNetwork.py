@@ -18,7 +18,7 @@ y = df['churn'].values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Define the neural network architecture
-model = MLPClassifier(hidden_layer_sizes=(8, 4), activation='relu', solver='adam', random_state=42)
+model = MLPClassifier(hidden_layer_sizes=(8, 4), activation='relu', solver='adam', random_state=42, max_iter=1000)
 
 # Fit the model to the training data
 model.fit(X_train, y_train)
