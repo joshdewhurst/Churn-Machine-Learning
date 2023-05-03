@@ -30,8 +30,8 @@ precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 
 print("Accuracy:", accuracy)
-print("Precision:" precision)
-print("Recal:" recall)
+print("Precision:", precision)
+print("Recal:", recall)
 
 # Load the new data
 new_data = pd.read_csv('new_data.csv')
