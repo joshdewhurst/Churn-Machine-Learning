@@ -32,3 +32,19 @@ recall = recall_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 print("Precision:" precision)
 print("Recal:" recall)
+
+# Load the new data
+new_data = pd.read_csv('new_data.csv')
+
+# Select the features in the same order as the model was trained on
+X_new = new_data[['age', 'gender', 'income', 'credit_score', 'previous_purchases']]
+
+# Convert the categorical variable gender to numerical using one-hot encoding
+X_new = pd.get_dummies(X_new, columns=['gender'])
+
+# Make predictions on the new data
+y_pred_new = dt.predict(X_new)
+
+# Print the predicted values
+print("Predicted values for new data:")
+print(y_pred_new)
