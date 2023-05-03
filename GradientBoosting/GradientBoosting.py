@@ -9,7 +9,6 @@ data = pd.read_csv('customer_data.csv')
 
 # Encode categorical features using one-hot encoding
 data = pd.get_dummies(data, columns=['account_status', 'other_behavioral_data'])
-print(data.columns)
 
 # Select the features and target variable
 X = data[['usage_frequency', 'account_status', 'other_behavioral_data']]
