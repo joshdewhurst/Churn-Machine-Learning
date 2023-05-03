@@ -69,7 +69,7 @@ usage_frequency,account_status,other_behavioral_data,churn
 0.22,Active,Low,0
 0.45,Active,Medium,0
 0.78,Inactive,Medium,1
-0.81,Inactive,Low,
+0.81,Inactive,Low,1
 0.25,Active,Low,0
 0.53,Inactive,Medium,0
 0.87,Active,High,1
