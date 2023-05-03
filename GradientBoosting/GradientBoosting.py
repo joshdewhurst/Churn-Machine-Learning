@@ -32,3 +32,21 @@ recall = recall_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
+
+# Load the new data
+new_data = pd.read_csv('new_customer_data.csv')
+
+# Encode categorical features using one-hot encoding
+new_data = pd.get_dummies(new_data, columns=['account_status', 'other_behavioral_data'])
+
+# Select the features
+X_new = new_data[['usage_frequency', 'account_status_active',
+                  'account_status_closed', 'other_behavioral_data_high',
+                  'other_behavioral_data_low', 'other_behavioral_data_medium']]
+
+# Make predictions on the new data
+y_pred = model.predict(X_new)
+
+# Print the predicted churn values
+print("Predicted churn values:")
+print(y_pred)
