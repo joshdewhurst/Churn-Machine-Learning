@@ -7,6 +7,9 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score
 # Load the data
 data = pd.read_csv('customer_data.csv')
 
+# Encode categorical features using one-hot encoding
+data = pd.get_dummies(data, columns=['account_status', 'other_behavioral_data'])
+
 # Select the features and target variable
 X = data[['usage_frequency', 'account_status', 'other_behavioral_data']]
 y = data['churn']
@@ -25,3 +28,7 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
+
+print("Accuracy:", accuracy)
+print("Precision:", precision)
+print("Recall:", recall)
