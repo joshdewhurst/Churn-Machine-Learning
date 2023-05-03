@@ -8,8 +8,11 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score
 data = pd.read_csv('customer_data.csv')
 
 # Select the features and target variable
-X = data[['usage_frequency', 'account_status', 'other_behavioral_data']]
+X = data[['age', 'gender', 'income', 'credit_score', 'previous_purchases']]
 y = data['churn']
+
+# Convert the categorical variable gender to numerical using one-hot encoding
+X = pd.get_dummies(X, columns=['gender'])
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
