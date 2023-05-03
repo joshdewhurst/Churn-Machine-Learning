@@ -37,7 +37,7 @@ print("Precision:", precision)
 print("Recall:", recall)
 
 # Load the new data
-new_data = pd.read_csv('new_customer_data.csv')
+new_data = pd.read_csv('new_data.csv')
 
 # Drop the id column
 new_data = new_data.drop(['id'], axis=1)
