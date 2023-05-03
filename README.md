@@ -25,7 +25,7 @@ Decision trees are a type of supervised learning algorithm used for classificati
 
 In the Decision Trees folder, I will be implementing the decision tree algorithm using the scikit-learn library. I will explain the code and how the algorithm works in detail in the README file in the folder.
 
-## Neural Networks
+## Neutral Networks
 Neural networks are a set of algorithms that are modeled after the human brain. They are used to recognize patterns and to cluster and classify data. Neural networks consist of layers of interconnected nodes that process information, with each layer processing information in a hierarchical way.
 
 In the Neural Networks folder, I will be implementing a simple neural network using the TensorFlow library. I will explain the code and how the algorithm works in detail in the README file in the folder.
