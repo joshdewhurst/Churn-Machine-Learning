@@ -10,46 +10,40 @@ Finally, I will use the insights from the predictive model to take proactive ste
 
 By using machine learning algorithms, I will develop a powerful predictive model that helps to retain customers and improve the overall health of the business. While I will not be creating pivot tables in this project, I will still utilize previously conducted spreadsheet analysis to inform my approach.
 
-# Logistic Regression
 
-In this code, we first import the necessary libraries (pandas, scikit-learn's logistic regression model, and the train_test_split function for splitting the data into training and testing sets).
+# Code and Approach
+I will be using Python for this project and will be creating separate folders for each of the following machine learning algorithms:
 
-We then load the data from a CSV file and select the relevant features and target variable. We split the data into training and testing sets using the train_test_split function.
+1. Decision Trees
+2. Neural Networks
+3. Gradient Boosting
+4. Random Forests
+5. Logistic Regression
 
-We then create an instance of the logistic regression model and fit it to the training data using the fit method. We then use the predict method to make predictions on the test set.
+## Decision Trees
+Decision trees are a type of supervised learning algorithm used for classification and regression. In this approach, a tree-like model is built where each internal node represents a test on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label. The goal is to create a model that predicts the value of a target variable based on several input variables.
 
-Finally, we evaluate the performance of the model using metrics like accuracy, precision, and recall.
+In the Decision Trees folder, I will be implementing the decision tree algorithm using the scikit-learn library. I will explain the code and how the algorithm works in detail in the README file in the folder.
 
-# Decision Tree
+## Neural Networks
+Neural networks are a set of algorithms that are modeled after the human brain. They are used to recognize patterns and to cluster and classify data. Neural networks consist of layers of interconnected nodes that process information, with each layer processing information in a hierarchical way.
 
-In this code, we first import the necessary libraries (pandas, scikit-learn's decision tree model, and the train_test_split function for splitting the data into training and testing sets).
+In the Neural Networks folder, I will be implementing a simple neural network using the TensorFlow library. I will explain the code and how the algorithm works in detail in the README file in the folder.
 
-We then load the data from a CSV file and select the relevant features and target variable. We split the data into training and testing sets using the train_test_split function.
+## Gradient Boosting
+Gradient Boosting is a machine learning technique used for regression and classification problems. It builds an ensemble of weak learners (usually decision trees) and combines them to produce a strong learner. The model is built in a stage-wise manner, with each subsequent model trying to correct the errors of the previous model.
 
-We then create an instance of the decision tree classifier and fit it to the training data using the fit method. We then use the predict method to make predictions on the test set.
+In the Gradient Boosting folder, I will be implementing the gradient boosting algorithm using the XGBoost library. I will explain the code and how the algorithm works in detail in the README file in the folder.
 
-Finally, we evaluate the performance of the model using metrics like accuracy, precision, and recall.
+## Random Forests
+Random Forests are a type of ensemble learning method that combine multiple decision trees to improve the accuracy of the model. In a random forest, each tree is built on a random sample of the data and a random subset of the features. The final prediction is then made by aggregating the predictions of all the trees.
 
-## How to run this code
+In the Random Forests folder, I will be implementing the random forest algorithm using the scikit-learn library. I will explain the code and how the algorithm works in detail in the README file in the folder.
 
-1. Ensure that the required libraries are installed. You can use pip to install them if they are not already installed:
-`pip install pandas scikit-learn`
+## Logistic Regression
+Logistic Regression is a type of regression analysis used to predict the outcome of a categorical dependent variable based on one or more independent variables. It is a simple and widely used algorithm for binary classification problems.
 
-2. Create a CSV file with customer data. The file should have columns for usage_frequency, account_status, other_behavioral_data, and churn.
+In the Logistic Regression folder, I will be implementing the logistic regression algorithm using the scikit-learn library. I will explain the code and how the algorithm works in detail in the README file in the folder.
 
-3. Save the CSV file in the same directory as the Python script and name it customer_data.csv.
-
-4. Run the Python script. It will load the customer data from the CSV file, split it into training and testing sets, fit a decision tree model to the training set, make predictions on the testing set, and evaluate the model's performance.
-
-5. The script will output the accuracy, precision, and recall scores for the model. You can use these scores to evaluate how well the model is performing.
-
-# Random Forest
-
-This loads customer data from a CSV file, trains a Random Forest Classifier model on the data, and evaluates the model's performance by comparing the predicted target variable with the actual target variable. The goal of the model is to predict which customers are most likely to churn.
-
-# Gradient Boosting
-This builds a predictive model using a Gradient Boosting Classifier from the scikit-learn library. The code loads the customer data from a CSV file, selects the relevant features and target variable, splits the data into training and testing sets, fits the gradient boosting model to the training data, makes predictions on the test set, and evaluates the model's performance using accuracy, precision, and recall metrics. The model is trained to identify which customers are most likely to churn based on their usage frequency, account status, and other behavioral data.
-
-# Neutrel Network
-
-This code builds a predictive model using a multi-layer perceptron (MLP) neural network from the scikit-learn library. The code loads the customer data from a CSV file, selects the relevant features and target variable, splits the data into training and testing sets, defines the neural network architecture, fits the model to the training data, makes predictions on the test set, and evaluates the model's performance using accuracy, precision, and recall metrics.
+# Further Applications
+The techniques used in this project can be applied to many other domains such as finance, healthcare, and marketing. By predicting customer churn, businesses can take proactive steps to retain their customers and improve their overall profitability.
