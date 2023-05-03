@@ -46,7 +46,7 @@ new_data = new_data.drop(['id'], axis=1)
 new_data = pd.get_dummies(new_data, columns=['account_status', 'other_behavioral_data'])
 
 # Select the features
-X_new = new_data.drop(['churn'], axis=1)
+X_new = new_data
 
 # Make predictions on the new data
 y_pred = model.predict(X_new)
